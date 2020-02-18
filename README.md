@@ -40,7 +40,7 @@ This is the parklife chatbot. It has been provided so that it can be imported in
 
 * images folder
 
-This folder contains the chat bot images used in the Parklife project. It contains an image of Alfred the owl, used as the chatbot iamge, and background of four parks.
+This folder contains the chat bot images used in the Parklife project. It contains an image of Alfred the owl, used as the chatbot image, and backgrounds of four parks.
 
 *Do not worry if you are missing the `data` folder, as this is not included in the Windows download.*
 
@@ -51,7 +51,7 @@ This folder contains the chat bot images used in the Parklife project. It contai
 Open a terminal window. (Alternatively named Console/Command prompt, depending on your operating system).
 Navigate to your botpress folder. (Type `cd` followed by the path to the botpress folder. e.g. `cd C:\botpress` in windows, or `cd /home/username/botpress` in linux or `cd /Applications/botpress` in MacOS.)
 
-Type `./bp` to run botpress.
+Type `./bp` to run botpress. (Alternatively just `bp`, again OS dependent)
 You will see text appearing displaying the startup of the chatbot. Botpress will now be up and running!
 
 In your web browser, navigate to `http://localhost:3000`. You will be shown a login window.
@@ -64,21 +64,21 @@ It will ask you to sign up. All you need to provide is an email and passsword. T
 
 ## Usage
 
-### Logging into botpress
+### Homepage
 Once you are logged in, you are provided with a list of bots, which should just display the test bot.
 
 ### Importing the chatbots
-To import the chatbots, click the dropdown ‘create bot’ and select ‘import existing’.
+To import the chatbot provided, click the dropdown `Create Bot` and select `Import Existing`.
 
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20import%20bot.png "Botpress import chatbot")
  
 The window you are given allows you to create the bot ID for the chatbot. This will be used as part of the web address the end users will visit when they use the bot. So this should be something succinct and meaningful.
 
-Then select the bot archive. Choose the parklife chatbot to import.
+Then select the bot archive. Choose the `Parklife Chatbot.tgz` to import.
 
 Once imported, the chatbot will appear in the bot list.
 Now selected ‘configure’ next to this newly imported bot.
-Here, you can change the Name of the bot, description and more details such as website and contact details.
+Here, you can change the Name of the bot, Description and More Details such as website and contact details.
 
 You can also change the Bot avatar, which will be displayed to end users, and the cover picture.
 
@@ -92,7 +92,7 @@ The chatbot is built as a flow diagram:
 
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20flow.png "Botpress import chatbot")
 
-Each box (named a `node` by botpress) is where the chatbot will perform an action.
+Each box (named a `node` by botpress) is where the chatbot will perform an action, such as asking a question.
 Once the action is complete, the chatbot moves to the linked box as illustrated by the black lines.
 
 The chatbot starts where the `start` green dot is indicated, on the very top, left, of the flow. When the chatbot has performed its action, in this case introducing itself, it goes to the next node where it asks a question.
@@ -104,8 +104,8 @@ The chatbot starts where the `start` green dot is indicated, on the very top, le
 Click on a box (a `node`) to see its contents on the left panel of the page.
 
 A `node` has 3 things it does:
-1. On Enter - what it does immediately
-2. On Recieve - What it does
+1. On Enter - What it does immediately
+2. On Recieve - Does it save user input
 3. Transitions - What node it goes to next
 
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20node.png "Botpress node")
