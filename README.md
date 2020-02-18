@@ -10,13 +10,11 @@ Download botpress for your operating system from here: https://botpress.com/down
 
 Download the toolkit from here: https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/Parklife%20toolkit.tar.gz and unzip the folder to a sensible location.
 
-Place the contents of the toolkit folder into the botpress folder. Your botpress folder should look somethihg like this:
+Place the contents of the toolkit folder into the botpress folder. Your botpress folder should look something like this:
 
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20folder.png "Botpress folder contents")
 
-The contents:
-
-*Do not worry if you are missing the `data` folder, as this is not included in the Windows download.*
+**The contents**:
 
 * bindings folder
 * modules folder
@@ -44,11 +42,14 @@ This is the parklife chatbot. It has been provided so that it can be imported in
 
 This folder contains the chat bot images used in the Parklife project. It contains an image of Alfred the owl, used as the chatbot iamge, and background of four parks.
 
+*Do not worry if you are missing the `data` folder, as this is not included in the Windows download.*
+
 *Folders and files may be created as the chatbot(s) are used.*
+
 
 ### Starting up botpress
 Open a terminal window. (Alternatively named Console/Command prompt, depending on your operating system).
-Navigate to your botpress folder. (In windows type `cd` followed by the path to the botpress folder. e.g. `cd C:\botpress`)
+Navigate to your botpress folder. (Type `cd` followed by the path to the botpress folder. e.g. `cd C:\botpress` in windows, or `cd /home/username/botpress` in linux or `cd /Applications/botpress` in MacOS.)
 
 Type `./bp` to run botpress.
 You will see text appearing displaying the startup of the chatbot. Botpress will now be up and running!
@@ -69,7 +70,7 @@ Once you are logged in, you are provided with a list of bots, which should just 
 ### Importing the chatbots
 To import the chatbots, click the dropdown ‘create bot’ and select ‘import existing’.
 
-![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20import.png "Botpress import chatbot")
+![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20import%20bot.png "Botpress import chatbot")
  
 The window you are given allows you to create the bot ID for the chatbot. This will be used as part of the web address the end users will visit when they use the bot. So this should be something succinct and meaningful.
 
@@ -80,6 +81,51 @@ Now selected ‘configure’ next to this newly imported bot.
 Here, you can change the Name of the bot, description and more details such as website and contact details.
 
 You can also change the Bot avatar, which will be displayed to end users, and the cover picture.
+
+### Editing the chatbot
+
+*I will only give basic instructions on changing and editing questions here, as you should consult the botpress documentation for more complex and detailed guidance and instructions.*
+
+#### Overview
+
+The chatbot is built as a flow diagram:
+
+![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20flow.png "Botpress import chatbot")
+
+Each box (named a `node` by botpress) is where the chatbot will perform an action.
+Once the action is complete, the chatbot moves to the linked box as illustrated by the black lines.
+
+The chatbot starts where the `start` green dot is indicated, on the very top, left, of the flow. When the chatbot has performed its action, in this case introducing itself, it goes to the next node where it asks a question.
+
+#### How it works
+
+Click on a box to see its contents on the left panel of the page.
+
+A `node` has 3 things it does:
+1. On Enter - what it does immediately
+2. On Recieve - What it does
+3. Transitions - What node it goes to next
+
+![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20node.png "Botpress node")
+
+* An example of `On Enter` - Say some text
+* An example of `On Recieve` - Wait for user input
+* An example of `Transitions` - Go to next question
+
+#### Change a question
+
+Click on a question
+Click on the `On Enter` section in ther left panel
+Hover over the text and click `edit`.
+Click the pencil icon to edit the text
+Click `Submit` then ¬Update action` to update the wording.
+
+#### Add a question
+
+Drag and drop one of the options under `Tools` on the left panel. I would advise `Node` for free text or `Skill Filling` for options.
+
+To make this process easier, rightclick and copy an existing node then right click and paste. Edit as before.
+
 
 ### Using the chatbot on a remote server
 If you intend on running this on a remote server, like the parklife chatbot which runs on the parklife website, you will need to connect to the remote server and upload your botpress folder to it.
