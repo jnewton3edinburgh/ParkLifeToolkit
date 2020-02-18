@@ -114,47 +114,44 @@ A `node` has 3 things it does:
 * An example of `On Recieve` - Wait for user input
 * An example of `Transitions` - Go to next question
 
-#### Change a questions
+#### Change a question
 
-Click on a question
-Click on the `On Enter` section in ther left panel
-Hover over the text and click `edit`.
-Click the pencil icon to edit the text
-Click `Submit` then ¬Update action` to update the wording.
+* Click on a question
+* Click on the `On Enter` section in ther left panel
+* Hover over the text and click `edit`.
+* Click the pencil icon to edit the text
+* Click `Submit` then ¬Update action` to update the wording.
 
 Some questions have information about the park following them.
 To change this, do the exact same as above, but change the text in the `On recieve` section.
 
 #### Add a free text question
 
-Drag and drop `Node` under `Tools` on the left panel onto the flow diagram in an open space.
-
-Make sure this new `node` is selected and press the plus button under the `On Enter` srection and select `Text` > `Add new text` to add the question you want. Type it in and select`Save` and `Update node`.
+* Drag and drop `Node` under `Tools` on the left panel onto the flow diagram in an open space.
+* Make sure this new `node` is selected and press the plus button under the `On Enter` srection and select `Text` > `Add new text` to add the question you want. Type it in and select`Save` and `Update node`.
 
 #### Wait for user feedback
 
-Select the node you created
-Click on `On Recieve` on the left panel.
-Tick the `Wait for user feedback` box.
+* Select the node you created
+* Click on `On Recieve` on the left panel.
+* Tick the `Wait for user feedback` box.
 
 #### Add question transition
 
 This is adding the link to the next question after this question is answered. This is required for the chatbot to continue after this question.
-Make sure this new `node` is selected
-Click on `Transitions` on the left panel
-Click the Plus icon button
-Select `Always` and `Transition to node` to always go to another question after this one is answered.
-Click `Create`
+* Make sure this new `node` is selected
+* Click on `Transitions` on the left panel
+* Click the Plus icon button
+* Select `Always` and `Transition to node` to always go to another question after this one is answered.
+* Click `Create`
 
 #### Add a multiple choice question
 
-Drag and drop `Choice` under `Tools` on the left panel onto the flow diagram in an open space.
-
-In the pop-up window, select the folder button, then `Create new single choice`. Now enter your question and the answers you want.
-
-The message and values for each choise are what is dispalyed to the user, and what will be saved to the database, respectively. These can be the same for simplicity.
-Now select`Save` and `Insert`.
-`Wait for user feedback` and transition points are already created for you.
+* Drag and drop `Choice` under `Tools` on the left panel onto the flow diagram in an open space.
+* In the pop-up window, select the folder button, then `Create new single choice`. Now enter your question and the answers you want.
+* *The message and values for each choice are what is displayed to the user, and what will be saved to the database, respectively. These can be the same for simplicity.*
+* Now select`Save` and `Insert`.
+* *`Wait for user feedback` and transition points are already created for you.*
 
 #### Connect the new question
 
