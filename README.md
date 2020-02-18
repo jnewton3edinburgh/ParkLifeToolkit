@@ -10,12 +10,13 @@ Download botpress for your operating system from here: https://botpress.com/down
 
 Download the toolkit from here: https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/Parklife%20toolkit.tar.gz and unzip the folder to a sensible location.
 
-Place the contents of the toolkit folder into the botpress folder. Your boitpress folder should looksomethihg like this:
+Place the contents of the toolkit folder into the botpress folder. Your botpress folder should look somethihg like this:
+
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20folder.png "Botpress folder contents")
 
 The contents:
 
-*Do not worry if you are missing the `Data` folder, as this is not included in the Windows download.*
+*Do not worry if you are missing the `data` folder, as this is not included in the Windows download.*
 
 * bindings folder
 * modules folder
@@ -29,11 +30,11 @@ This is an empty database file used by the chatbot to store interactions with it
 
 * .env
 
-This is the environmentfile that points the chatbot at the database it should use. This points to a file named 'botpressDatabase.db', which is the previously mentioned file.
+This is the environment file that points the chatbot at the database it should use. This points to a file named `botpressDatabase.db`, which is the previously mentioned file.
 
 * getCSV.sql
 
-This is an sqlite script to extract a list of questions and answers in CSV format from the database. 
+This is an sqlite script to extract a list of questions and answers in CSV format from the database.
 
 * ParklifeChatbot.tgz
 
@@ -53,23 +54,26 @@ Type `./bp` to run botpress.
 You will see text appearing displaying the startup of the chatbot. Botpress will now be up and running!
 
 In your web browser, navigate to `http://localhost:3000`. You will be shown a login window.
+
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20login.png "Botpress login window")
 
 *Note that if you have anything already running on your machine that uses this port, botpress will attempt to use the next available one. This should be noted on the startup text.*
 
-It will ask you to sign up. All you need to provide is an email and passsword. These can be anything you choose as they are purely for login security. Remember these credentials as you will need them again to log back in.
+It will ask you to sign up. All you need to provide is an email and passsword. These can be anything you choose as they are purely used for login security. Remember these credentials as you will need them again to log back in.
 
 ## Usage
 
 ### Logging into botpress
-Once you are logged in, you are provided with a list of bots, which should just display the test bot. Which you are w![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+Once you are logged in, you are provided with a list of bots, which should just display the test bot.
 
 ### Importing the chatbots
 To import the chatbots, click the dropdown ‘create bot’ and select ‘import existing’.
+
+![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20import.png "Botpress import chatbot")
  
 The window you are given allows you to create the bot ID for the chatbot. This will be used as part of the web address the end users will visit when they use the bot. So this should be something succinct and meaningful.
 
-Then select the bot archive. Choose one of the parklife chatbots to import.
+Then select the bot archive. Choose the parklife chatbot to import.
 
 Once imported, the chatbot will appear in the bot list.
 Now selected ‘configure’ next to this newly imported bot.
