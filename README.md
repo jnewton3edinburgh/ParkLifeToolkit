@@ -82,11 +82,11 @@ Here, you can change the Name of the bot, description and more details such as w
 
 You can also change the Bot avatar, which will be displayed to end users, and the cover picture.
 
-### Editing the chatbot
+## Editing the chatbot
 
 *I will only give basic instructions on changing and editing questions here, as you should consult the botpress documentation for more complex and detailed guidance and instructions.*
 
-#### Overview
+### Overview
 
 The chatbot is built as a flow diagram:
 
@@ -99,9 +99,9 @@ The chatbot starts where the `start` green dot is indicated, on the very top, le
 
 *Use the scrollwheel to zoom in and out. Note that this may be time consuming on larger chatbots!*
 
-#### How it works
+### How it works
 
-Click on a box to see its contents on the left panel of the page.
+Click on a box (a `node`) to see its contents on the left panel of the page.
 
 A `node` has 3 things it does:
 1. On Enter - what it does immediately
@@ -114,29 +114,21 @@ A `node` has 3 things it does:
 * An example of `On Recieve` - Wait for user input
 * An example of `Transitions` - Go to next question
 
-#### Change a question
+## Create a new question
 
-* Click on a question
-* Click on the `On Enter` section in ther left panel
-* Hover over the text and click `edit`.
-* Click the pencil icon to edit the text
-* Click `Submit` then ¬Update action` to update the wording.
 
-Some questions have information about the park following them.
-To change this, do the exact same as above, but change the text in the `On recieve` section.
-
-#### Add a free text question
+### Add a free text question
 
 * Drag and drop `Node` under `Tools` on the left panel onto the flow diagram in an open space.
 * Make sure this new `node` is selected and press the plus button under the `On Enter` srection and select `Text` > `Add new text` to add the question you want. Type it in and select`Save` and `Update node`.
 
-#### Wait for user feedback
+### Wait for user feedback
 
 * Select the node you created
 * Click on `On Recieve` on the left panel.
 * Tick the `Wait for user feedback` box.
 
-#### Add question transition
+### Add question transition
 
 This is adding the link to the next question after this question is answered. This is required for the chatbot to continue after this question.
 * Make sure this new `node` is selected
@@ -145,7 +137,7 @@ This is adding the link to the next question after this question is answered. Th
 * Select `Always` and `Transition to node` to always go to another question after this one is answered.
 * Click `Create`
 
-#### Add a multiple choice question
+### Add a multiple choice question
 
 * Drag and drop `Choice` under `Tools` on the left panel onto the flow diagram in an open space.
 * In the pop-up window, select the folder button, then `Create new single choice`. Now enter your question and the answers you want.
@@ -153,30 +145,42 @@ This is adding the link to the next question after this question is answered. Th
 * Now select`Save` and `Insert`.
 * *`Wait for user feedback` and transition points are already created for you.*
 
-#### Connect the new question
+### Connect the new question
 
 Connect the question to a previous and next question in the flow by dragging the small square at the top of the node to the previous questions bottom.
 
 ![alt text](https://github.com/jnewton3edinburgh/ParkLifeToolkit/raw/master/documentation%20images/botpress%20node%20connection.png "Botpress node connection")
 
-#### Copy an existing question
+### Copy an existing question
 
 To make the question creation process easier, rightclick and copy an existing node then right click and paste. Edit as before.
 
-### Using the chatbot on a remote server
+## Change an existing question
+
+* Click on a question
+* Click on the `On Enter` section in ther left panel
+* Hover over the text and click `edit`.
+* Click the pencil icon to edit the text
+* Click `Submit` then `Update action` to update the wording.
+
+Some questions have information about the park following them.
+To change this, do the exact same as above, but change the text in the `On recieve` section.
+
+
+## Using the chatbot on a remote server
 If you intend on running this on a remote server, like the parklife chatbot which runs on the parklife website, you will need to connect to the remote server and upload your botpress folder to it.
 
 From the remote server, then run the bp file and botpress will be running on the remote machine the same way as it runs on your local machine.
 
 If connecting from a terminal window, this window must remain open for botpress to continue running. To have it run it the background, without needing this window open - refer here: 
 
-### The database
+## The database
 The SQLite database is one file, named `botpressDatabase.db` in the botpress folder.
 
 To read the database you need SQLite installed on your system, or at least software capable of reading SQLite databases.
 
 *The database is by default in SQLite. You can change to using PostGres as the database, but this is more advanced and you can refer to the botpress documentation on how to do so.*
 
-### The SQL script
+## The SQL script
 
 The `getCSV.sql` file included in the toolkit is a script to extract a list of questions and answers from the botpres database. This requires sqlite installed.
